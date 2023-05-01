@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  SBUERK\TF8TestExtension\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  SBUERK\TF8TestExtension\SimpleService:
+    public: true

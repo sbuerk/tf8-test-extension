@@ -71,7 +71,6 @@ Options:
     -s <...>
         Specifies which test suite to run
             - acceptance: backend acceptance tests
-            - buildCss: compile CSS from SCSS
             - cgl: cgl test and fix all php files
             - clean: clean up test related build files
             - composerUpdate: "composer update", handy if host has no PHP
@@ -253,9 +252,9 @@ DOCKER_PHP_IMAGE=`echo "php${PHP_VERSION}" | sed -e 's/\.//'`
 # Set $1 to first mass argument, this is the optional test file or test directory to execute
 shift $((OPTIND - 1))
 TEST_FILE=${1}
-if [ -n "${1}" ]; then
-    TEST_FILE="Web/typo3conf/ext/styleguide/${1}"
-fi
+#if [ -n "${1}" ]; then
+#    TEST_FILE="Web/typo3conf/ext/styleguide/${1}"
+#fi
 
 if [ ${SCRIPT_VERBOSE} -eq 1 ]; then
     set -x
@@ -287,12 +286,6 @@ case ${TEST_SUITE} in
                 echo "call \".Build/Scripts/runTests.sh -h\" to display help and valid options" >&2
                 exit 1
         esac
-        docker-compose down
-        ;;
-    buildCss)
-        setUpDockerComposeDotEnv
-        docker-compose run build_css
-        SUITE_EXIT_CODE=$?
         docker-compose down
         ;;
     cgl)
