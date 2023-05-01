@@ -1,0 +1,67 @@
+{
+    "name": "sbuerk/tf8-test-extension",
+    "description": "typo3/testing-framework v8 extension level test",
+    "license": "GPL-2.0-or-later",
+    "type": "typo3-cms-extension",
+    "authors": [
+        {
+            "name": "Stefan Bürk",
+            "email": "stefan@buerk.tech",
+            "role": "Maintainer"
+        }
+    ],
+    "homepage": "https://github.com/sbuerk/tf8-test-extension",
+    "support": {
+        "issues": "https://github.com/sbuerk/tf8-test-extension/issues"
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.30.2",
+        "friendsofphp/php-cs-fixer": "^3.16.0",
+        "phpstan/phpstan": "^1.10.14",
+        "phpunit/phpunit": "^10.1",
+        "typo3/cms-backend": "~12.4@dev",
+        "typo3/cms-core": "~12.4@dev",
+        "typo3/cms-frontend": "~12.4@dev",
+        "typo3/testing-framework": "dev-main"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "SBUERK\\TF8TestExtension\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SBUERK\\TF8TestExtension\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "ergebnis/composer-normalize": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "bin-dir": ".Build/bin",
+        "preferred-install": {
+            "typo3/testing-framework": "source",
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "vendor-dir": ".Build/vendor"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x.x-dev"
+        },
+        "typo3/cms": {
+            "app-dir": ".Build",
+            "extension-key": "tf8_extension",
+            "web-dir": ".Build/Web"
+        }
+    }
+}
