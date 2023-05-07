@@ -1,4 +1,4 @@
-[![tests](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests.yml/badge.svg)](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests.yml)
+[![tests12](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests12.yml/badge.svg)](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests12.yml)[![tests13](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests13.yml/badge.svg)](https://github.com/sbuerk/tf8-test-extension/actions/workflows/tests13.yml)
 
 TestingFramework 8 - Extension Test
 ===================================
