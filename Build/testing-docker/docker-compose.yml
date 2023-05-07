@@ -82,7 +82,7 @@ services:
         echo Database is up;
         php -v | grep '^PHP';
         mkdir -p .Build/Web/typo3temp/var/tests/
-        COMMAND=\".Build/vendor/codeception/codeception/codecept run Backend -d -c Tests/codeception.yml ${TEST_FILE}\"
+        COMMAND=\".Build/vendor/codeception/codeception/codecept run Application -d -c Tests/codeception.yml ${TEST_FILE}\"
         if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
           XDEBUG_MODE=\"off\" \
           $${COMMAND};
@@ -124,7 +124,7 @@ services:
         echo Database is up;
         php -v | grep '^PHP';
         mkdir -p Web/typo3temp/var/tests/
-        COMMAND=\".Build/vendor/codeception/codeception/codecept run Backend -d -c Tests/codeception.yml ${TEST_FILE}\"
+        COMMAND=\".Build/vendor/codeception/codeception/codecept run Application -d -c Tests/codeception.yml ${TEST_FILE}\"
         if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
           XDEBUG_MODE=\"off\" \
           $${COMMAND};
@@ -166,7 +166,7 @@ services:
         echo Database is up;
         php -v | grep '^PHP';
         mkdir -p Web/typo3temp/var/tests/
-        COMMAND=\".Build/vendor/codeception/codeception/codecept run Backend -d -c Tests/codeception.yml ${TEST_FILE}\"
+        COMMAND=\".Build/vendor/codeception/codeception/codecept run Application -d -c Tests/codeception.yml ${TEST_FILE}\"
         if [ ${PHP_XDEBUG_ON} -eq 0 ]; then
           XDEBUG_MODE=\"off\" \
           $${COMMAND};

@@ -14,6 +14,9 @@ return (new \PhpCsFixer\Config())
                 __DIR__ . '/../../Configuration/',
                 __DIR__ . '/../../Tests/',
             ])
+            ->notPath([
+                'Tests/Acceptance/Support/_generated/',
+            ])
     )
     ->setUsingCache(false)
     ->setRiskyAllowed(true)
