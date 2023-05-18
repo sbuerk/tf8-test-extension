@@ -14,6 +14,6 @@ final class SimpleServiceTest extends UnitTestCase
      */
     public function methodTextReturnsExpectedValue(): void
     {
-        self::assertSame('simpleservice::text()', (new SimpleService())->text());
+        self::assertSame('simpleservice::text(1)', (new SimpleService())->text(1));
     }
 }
