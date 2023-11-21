@@ -1,0 +1,15 @@
+{
+  "name": "sbuerk/composer-extension",
+  "type": "typo3-cms-extension",
+  "description": "fictional composer test extension",
+  "version": "1.0.0",
+  "require": {
+    "composer/installers": "~1.0 || ~2.0",
+    "typo3/cms-core": ">=12.4.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "composer_extension"
+    }
+  }
+}
